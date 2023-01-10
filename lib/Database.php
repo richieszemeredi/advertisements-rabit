@@ -1,6 +1,8 @@
 <?php
 
 namespace lib;
+use mysqli;
+
 class Database
 {
     const DATABASE_HOST = 'database:3306';
