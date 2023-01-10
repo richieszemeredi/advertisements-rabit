@@ -9,6 +9,6 @@ class Model {
 
     public function getList()
     {
-        return \Database::connection()->query("SELECT * FROM $this->table");
+        return Database::connection()->query("SELECT * FROM $this->table");
     }
 }
