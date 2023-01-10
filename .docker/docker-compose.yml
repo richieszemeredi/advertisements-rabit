@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  web:
+    build:
+      dockerfile: ./web/Dockerfile
+    volumes:
+      - ../:/var/www/html
+    ports:
+      - "80:80"
+
+  database:
+    image: mariadb:latest
+    environment:
+      MARIADB_ROOT_PASSWORD: rootPass
+      MARIADB_DATABASE: advertisements
+      MARIADB_USER: advertisementsUser
+      MARIADB_PASSWORD: advertisementsPassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - database:/var/lib/mysql
+      - ./database:/docker-entrypoint-initdb.d
+
+volumes:
+  database:
