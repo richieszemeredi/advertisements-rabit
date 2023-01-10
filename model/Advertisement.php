@@ -2,13 +2,11 @@
 
 namespace model;
 
-use Model;
+use lib\Model;
 
 class Advertisement extends Model {
-    public $table = 'advertisement';
-
-    public static array $properties = [
+    public string $table = 'advertisements';
+    public array $properties = [
         'title' => 'Title'
     ];
-
 }

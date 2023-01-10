@@ -1,6 +1,6 @@
 <?php
 
-namespace model;
+namespace lib;
 
 class Model {
     public string $table = '';

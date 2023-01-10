@@ -2,7 +2,7 @@
     <thead>
     <tr>
         <?php
-        foreach ($properties as $property) {
+        foreach ($args['properties'] as $property) {
             echo "<th>$property</th>";
         }
         ?>
@@ -10,9 +10,9 @@
     </thead>
     <tbody>
     <?php
-    foreach ($data as $row) {
+    foreach ($args['data'] as $row) {
         echo '<tr>';
-        foreach ($properties as $key => $property) {
+        foreach ($args['properties'] as $key => $property) {
             echo "<td>$row[$key]</td>";
         }
         echo '<tr/>';
