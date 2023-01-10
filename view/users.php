@@ -20,3 +20,5 @@
     ?>
     </tbody>
 </table>
+
+<a href="/" class="button">Go back</a>

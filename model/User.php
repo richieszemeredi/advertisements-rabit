@@ -7,6 +7,7 @@ use lib\Model;
 class User extends Model {
     public string $table = 'users';
     public array $properties = [
+        'id' => 'ID',
         'name' => 'Name'
     ];
 }

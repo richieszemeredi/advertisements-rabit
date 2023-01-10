@@ -13,10 +13,13 @@
     foreach ($args['data'] as $row) {
         echo '<tr>';
         foreach ($args['properties'] as $key => $property) {
-            echo "<td>$row[$key]</td>";
+            $value = isset($row[$key]) ? $row[$key] : '';
+            echo "<td>$value</td>";
         }
         echo '<tr/>';
     }
     ?>
     </tbody>
 </table>
+
+<a href="/" class="button">Go back</a>

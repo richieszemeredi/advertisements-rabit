@@ -1,0 +1,89 @@
+:root {
+    --text-primary: #353D41;
+    --color-primary: #0E4D5E;
+    --color-secondary: #69808A;
+    --text-secondary: #598695;
+    --text-sokandory: #203841;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    color: white;
+    background: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100%;
+    font-family: 'Sora', serif;
+    justify-content: center;
+}
+
+.content {
+    max-width: 500px;
+    align-items: center;
+    width: 100% ;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(35px);
+    border-radius: 15px;
+    box-shadow: rgba(46, 47, 51, 0.82) 0px 8px 24px;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    width: 100%;
+    background: rgba(126, 126, 126, 0.22);
+
+}
+
+.logo {
+    width: 150px;
+}
+
+.header-text {
+    font-size: 20px;
+}
+
+.body {
+    width: calc(100% - 100px);
+    height: calc(100% - 30px);
+    padding: 15px 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    background: rgba(196, 196, 196, 0.3);
+}
+
+.button-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    box-shadow: rgba(46, 47, 51, 0.3) 0px 8px 24px;
+    text-decoration: none;
+    text-underline: none;
+    padding: 10px 15px;
+    margin: 15px;
+    border-radius: 15px;
+    background: var(--color-primary);
+    color: white;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: #136b80;
+}
