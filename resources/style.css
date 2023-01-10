@@ -1,11 +1,3 @@
-:root {
-    --text-primary: #353D41;
-    --color-primary: #0E4D5E;
-    --color-secondary: #69808A;
-    --text-secondary: #598695;
-    --text-sokandory: #203841;
-}
-
 html {
     height: 100%;
 }
@@ -87,7 +79,7 @@ body {
     padding: 10px 15px;
     margin: 15px;
     border-radius: 15px;
-    background: var(--color-primary);
+    background: #0E4D5E;
     color: white;
     transition: 0.2s;
 }
