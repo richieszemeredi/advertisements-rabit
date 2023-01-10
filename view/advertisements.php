@@ -1,3 +1,10 @@
+<?php
+/**
+ * Advertisements page template.
+ *
+ * @var array $args Template variables.
+ */
+?>
 <table>
     <thead>
     <tr>
@@ -13,7 +20,7 @@
     foreach ($args['data'] as $row) {
         echo '<tr>';
         foreach ($args['properties'] as $key => $property) {
-            $value = isset($row[$key]) ? $row[$key] : '';
+            $value = $row[$key] ?? '';
             echo "<td>$value</td>";
         }
         echo '<tr/>';

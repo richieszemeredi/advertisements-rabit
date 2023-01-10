@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>RabIT Advertisement App</title>
     <link rel="stylesheet" href="../resources/style.css">
@@ -7,12 +7,12 @@
 </head>
 <body>
 <div class="content">
-    <div class="header">
-        <img class="logo" src="https://www.rabit.hu/wp-content/themes/rabit/assets/images/logo.png" alt="rabit-logo  ">
+    <a class="header" href="/">
+        <img class="logo" src="https://www.rabit.hu/wp-content/themes/rabit/assets/images/logo.png" alt="rabit-logo">
         <h1 class="header-text">Advertisement App</h1>
-    </div>
+    </a>
     <div class="body">
-        <?= $args['content'] ?>
+        <?= /** @var array $args */ $args['content'] ?>
     </div>
 </div>
 </body>

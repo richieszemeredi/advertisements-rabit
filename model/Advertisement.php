@@ -4,7 +4,11 @@ namespace model;
 
 use lib\Database;
 use lib\Model;
+use mysqli_result;
 
+/**
+ * Model representation of advertisements.
+ */
 class Advertisement extends Model {
     public string $table = 'advertisements';
     public array $properties = [
@@ -13,9 +17,11 @@ class Advertisement extends Model {
         'user' => 'User'
     ];
 
-    public function getList()
+    /**
+     * {@inheritDoc}
+     */
+    public function findAll(): mysqli_result|bool
     {
-        $advertisements = Database::connection()->query("select advertisements.id, title, name as 'user' from advertisements left join users on advertisements.userId = users.id;");
-        return $advertisements;
+        return Database::connection()->query("select advertisements.id, title, name as 'user' from advertisements left join users on advertisements.userId = users.id;");
     }
 }

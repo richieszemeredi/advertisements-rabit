@@ -1,3 +1,10 @@
+<?php
+/**
+* Users page template.
+*
+* @var array $args Template variables.
+*/
+?>
 <table>
     <thead>
     <tr>

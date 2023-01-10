@@ -2,16 +2,34 @@
 
 namespace lib;
 
+/**
+ * Handles requests and rendering pages.
+ */
 class Controller
 {
-    public function handle()
+    /**
+     * Handles incoming requests.
+     *
+     * TODO: Implement other type of requests.
+     *
+     * @return void
+     */
+    public function handle(): void
     {
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $this->handleGet();
         }
     }
 
-    private function handleGet()
+    /**
+     * Handles GET requests.
+     * Calls the corresponding controller's index method.
+     *
+     * TODO: Implement subpaths.
+     *
+     * @return void
+     */
+    private function handleGet(): void
     {
         $content = '';
 
@@ -34,17 +52,34 @@ class Controller
         echo $this->render(dirname(__FILE__) . '/../view/page.php', ['content' => $content]);
     }
 
+    /**
+     * Renders the base site of the path.
+     *
+     * @return string
+     */
     public function index(): string
     {
         return $this->render(dirname(__FILE__) . '/../view/index.php');
     }
 
+    /**
+     * Renders the 404 page.
+     *
+     * @return string
+     */
     private function notFound(): string
     {
         return $this->render(dirname(__FILE__) . '/../view/404.php');
     }
 
-    public function render($path, array $args = []): string
+    /**
+     * Renders a page into a variable based on a path, and embeds given variables to be accessed on the rendered page.
+     *
+     * @param string $path
+     * @param array $args
+     * @return string
+     */
+    public function render(string $path, array $args = []): string
     {
         extract($args);
         ob_start();
@@ -54,8 +89,7 @@ class Controller
         if ($view) {
             return $view;
         } else {
-            throw new \Exception('View file not found!');
+            return '';
         }
     }
-
 }
